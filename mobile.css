@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-darker-blue: hsl(217, 54%, 11%);
+    --Very-dark-blue: hsl(216, 50%, 16%);
+    --Dark-blue: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    padding: 4rem 2rem;
+    display: grid;
+    place-content: center;
+    background-color: var(--Very-darker-blue);
+    font-family: 'Outfit', sans-serif;
+}
+main {
+    padding: 2rem;
+    background-color: var(--Very-dark-blue);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+div.image { 
+    background-color: var(--Cyan);
+    position: relative;
+    order: -1;
+    border-radius: .5rem;
+} 
+img.hover-img {
+    transition: 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+div.image:hover .nft-image{
+    opacity: 0.5;
+    border-radius: .5rem;
+}
+div.image:hover .hover-img {
+    opacity: 1;
+}
+img.nft-image {
+    display: block;
+    width: 100%;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+}
+img.nft-image:hover {
+    mix-blend-mode: multiply;
+    color: var(--Cyan);
+    cursor: pointer; 
+}
+h1 {
+    color: var(--White);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+h1:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+p {
+    line-height: 1.5;
+    color: var(--Soft-blue);
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+div.price-info {
+    display: grid;
+    grid-template-columns: 12rem 6rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+div.price {
+    color: var(--Cyan);
+    font-weight: 400;
+    display: grid;
+    grid-template-columns: 1rem 7rem;
+}
+div.timeframe {
+    display: grid;
+    grid-template-columns: 1rem 5rem;
+    color: var(--Soft-blue);
+    justify-items: end;
+}
+hr {
+    margin-bottom: 1rem;
+    border-color: var(--Soft-blue);
+}
+div.creator {
+    display: grid;
+    grid-template-columns: 3rem 15rem;
+    align-items: center;
+}
+img.avatar {
+    width: 100%;
+    border: solid var(--White);
+    border-radius: 3rem;
+}
+div.text {
+    color: var(--Soft-blue);
+    margin-left: 1rem;
+}
+span {
+    color: var(--White);
+}
+span:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+footer { 
+    font-size: 1rem; 
+    text-align: center; 
+    color: var(--White);
+}
+footer a { 
+    color: hsl(228, 45%, 44%); 
+}
